@@ -1,0 +1,59 @@
+/* Fuentes y estilos de texto */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Navbar personalizado */
+.logo {
+    width: 60px; /* Tamaño del logo */
+    height: 60px;
+    border-radius: 50%;
+}
+
+.navbar-brand img {
+    border-radius: 50%;
+}
+
+/* Estilos de botones */
+.btn-primary {
+    background-color: #0779e4;
+    border-color: #0779e4;
+}
+
+.btn-primary:hover {
+    background-color: #055aa8;
+    border-color: #055aa8;
+}
+
+/* Estilo para las tarjetas de producto */
+.card-img-top {
+    width: 100%;
+    max-width: 100px;
+    height: 80px; /* Tamaño fijo para todas las imágenes */
+    object-fit: cover; 
+    display:block;
+    margin:0 auto
+}
+
+/* Estilos para precios y enlaces */
+.price {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #28a745;
+}
+
+a {
+    color: #0779e4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de pie de página */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+}
