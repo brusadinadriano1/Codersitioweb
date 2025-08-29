@@ -28,9 +28,9 @@ body {
 
 /* Estilo para las tarjetas de producto */
 .card-img-top {
-    width: 100%;
-    max-width: 100px;
-    height: 80px; /* Tamaño fijo para todas las imágenes */
+    width: 50%;
+    max-width: 100%;
+    height: auto; /* Tamaño fijo para todas las imágenes */
     object-fit: cover; 
     display:block;
     margin:0 auto
