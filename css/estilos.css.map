@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../sass/main.scss","../sass/_variables.scss"],"names":[],"mappings":"AAIA;EACI;EACA,kBCHU;EDIV;EACA;;;AAIJ;EACI;EACA;EACA;EACA;EACA;ECNA;EDQA;EACA;;AAGA;EACI,OCpBO;EDqBP;EACA;;AAIJ;EACI;EACA;EACA,kBChCS;EDiCT;EACA;EACA;EACA;;AAGA;EAEI;EACA;;;AAMZ;EACI;IACI;IACA;;EAEJ;IACI;IACA;;;AAKR;EACI","file":"estilos.css"}

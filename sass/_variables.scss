@@ -1,0 +1,13 @@
+// Paleta de colores
+$color-primario: #3498db; // Azul
+$color-secundario: #e74c3c; // Rojo
+$color-claro: #ecf0f1; // Gris claro
+$color-oscuro: #2c3e50; // Gris oscuro
+
+// Transiciones y animaciones
+$transicion-suave: 3s ease-in-out;
+
+// Mixins
+@mixin sombra-caja($x: 0, $y: 4px, $blur: 10px, $color: rgba(0, 0, 0, 0.1)) {
+    box-shadow: $x $y $blur $color;
+}
