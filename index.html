@@ -3,63 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Suplementos Web | La Mejor Proteína y Creatina en Argentina</title>
+    <meta name="description" content="Encuentra los mejores suplementos deportivos: proteína whey, creatina monohidratada y BCAA. Potencia tu rendimiento y alcanza tus metas fitness. Envíos a todo el país.">
+    <meta name="keywords" content="suplementos, proteína, creatina, BCAA, fitness, gimnasio, Argentina, comprar suplementos">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <header class="header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-                    <img src="./img/logo.jpg" alt="Logo Suplementos Pro"
-                        class="d-inline-block align-text-top me-2 logo">
-                    Suplementos Pro
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/productos.html">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.jpg" alt="Logo Suplementos Web" width="40" height="40" class="d-inline-block align-text-top">
+                <h1 class="d-inline-block ms-2 h4">Suplementos Web</h1>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="pages/productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="pages/contacto.html">Contacto</a></li>
+                </ul>
             </div>
         </nav>
-    </header>
+    </div>
+</header>
 
-    <main class="main-contenido">
-        <section class="seccion-hero">
-            <h1>¡Potencia tu Rendimiento con Suplementos Pro!</h1>
-            <p>Tu aliado en nutrición deportiva de alta calidad.</p>
-            <a href="./pages/productos.html" class="btn-principal">Ver Productos</a>
+    <main class="main-content container mt-5">
+        <section class="animate-on-load text-center mb-5">
+            <h2 class="display-4 mb-3">Tu Potencial, Nuestra Fórmula: Suplementos de Alto Rendimiento</h2>
+            <p class="lead">Liderando el mercado de suplementos en Argentina. Garantizamos calidad, pureza y resultados reales. ¡Empezá a construir tu mejor versión hoy!</p>
         </section>
 
-        <section class="seccion-quienes-somos">
-            <h2>¿Quiénes Somos?</h2>
-            <p>En Suplementos Pro, nos dedicamos a ofrecer una amplia gama de suplementos deportivos de la marca Whey,
-                cuidadosamente seleccionados para atletas y entusiastas del fitness. Nuestro objetivo es ayudarte a
-                alcanzar tus metas de rendimiento, recuperación y bienestar general.</p>
+        <section class="seccion-cards row g-4">
+            <article class="col-md-4 animate-on-load" style="animation-delay: 0.2s;">
+                <div class="card card-producto p-3">
+                    <img src="img/proteinawhey.jpg" class="card-img-top mx-auto" alt="Proteína Whey" style="max-width: 150px;">
+                    <div class="card-body">
+                        <h3 class="card-title h3">Proteínas Puras</h3>
+                        <p class="card-text">La base esencial para la recuperación muscular. Encuentra Whey Protein, Caseína e Isolate, ideales para cualquier etapa de tu entrenamiento.</p>
+                        <h4>¡Envío Gratis en Proteínas!</h4>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-4 animate-on-load" style="animation-delay: 0.4s;">
+                <div class="card card-producto p-3">
+                    <img src="img/creatinawhey.jpg" class="card-img-top mx-auto" alt="Creatina Monohidratada" style="max-width: 150px;">
+                    <div class="card-body">
+                        <h3 class="card-title h3">Creatina Monohidratada</h3>
+                        <p class="card-text">Potencia tu fuerza explosiva y aumenta la masa muscular. Creatina 100% pura y micronizada, con la mejor absorción del mercado.</p>
+                        <h4>Creatina: El Suplemento Nº 1</h4>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-4 animate-on-load" style="animation-delay: 0.6s;">
+                <div class="card card-producto p-3">
+                    <img src="img/bcaaswhey.jpg" class="card-img-top mx-auto" alt="BCAAs" style="max-width: 150px;">
+                    <div class="card-body">
+                        <h3 class="card-title h3">BCAAs y Aminoácidos</h3>
+                        <p class="card-text">Frena el catabolismo y acelera la reparación de fibras. Esenciales para entrenamientos intensos y dietas bajas en carbohidratos.</p>
+                        <h4>Aminoácidos Esenciales</h4>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="mt-5 py-5 border-top">
+            <h2 class="text-center mb-4">La Mejor Calidad en Suplementos de Argentina</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="h5">Certificación y Pureza Garantizada</h3>
+                    <p>Todos nuestros productos provienen de fábricas certificadas. Realizamos pruebas de laboratorio independientes en Argentina para asegurar la pureza del 100% en cada lote.</p>
+                    <h4 class="h6">Pruebas de Calidad Rigurosas</h4>
+                    <p>Nos enfocamos en la salud de nuestros clientes, por eso solo vendemos marcas reconocidas globalmente por su efectividad y seguridad.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="h5">Comprá Fácil y Recibí Rápido</h3>
+                    <p>Nuestro sistema de logística asegura que recibas tu pedido en cualquier punto del país. Entregas en CABA y GBA en 24 horas y al resto de las provincias en 48-72 horas hábiles.</p>
+                    <h4 class="h6">Servicio al Cliente Premium</h4>
+                    <p>¿Tenés dudas sobre cómo tomar tu suplemento? Nuestro equipo de nutricionistas deportivos te asesora de lunes a viernes.</p>
+                </div>
+            </div>
+            
+            <h5 class="mt-4">¿Qué es la Creatina Monohidratada?</h5>
+            <p>Es un compuesto natural que ayuda a regenerar el ATP (la energía de tus células musculares). Tomar creatina aumenta tu rendimiento, te permite levantar más peso y promueve la hidratación celular. Es segura y esencial para cualquier deportista.</p>
+            
+            <h6>Beneficios de la Proteína Whey</h6>
+            <p>La proteína de suero de leche (Whey) tiene el más alto valor biológico, lo que significa que tu cuerpo la absorbe y utiliza de manera eficiente para construir y reparar tejido muscular después del ejercicio. Es fundamental para la fase de recuperación.</p>
+
+            <p class="mt-4">Somos distribuidores oficiales de las principales marcas internacionales, garantizando precios competitivos y autenticidad. No te arriesgues con suplementos de dudosa procedencia.</p>
+            <p>Consultá nuestra sección de productos para ver las promociones de la semana en quemadores de grasa y pre-entrenos.</p>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Suplementos Pro. Todos los derechos reservados.</p>
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>&copy; 2025 Suplementos Web. Todos los derechos reservados | Argentina.</p>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

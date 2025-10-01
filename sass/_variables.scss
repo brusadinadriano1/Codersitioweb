@@ -1,13 +1,42 @@
-// Paleta de colores
-$color-primario: #3498db; // Azul
-$color-secundario: #e74c3c; // Rojo
-$color-claro: #ecf0f1; // Gris claro
-$color-oscuro: #2c3e50; // Gris oscuro
+// sass/_variables.scss
 
-// Transiciones y animaciones
-$transicion-suave: 3s ease-in-out;
+// ------------------------------------
+// 1. PALETA DE COLORES
+// ------------------------------------
+$color-primario: #007bff; // Azul fuerte para botones y headings
+$color-secundario: #28a745; // Verde para ofertas/éxito
+$color-fondo: #f8f9fa; // Gris claro para el fondo
+$color-texto-oscuro: #343a40; // Texto principal
+$color-sombra: rgba(0, 0, 0, 0.15); // Sombra sutil
 
-// Mixins
-@mixin sombra-caja($x: 0, $y: 4px, $blur: 10px, $color: rgba(0, 0, 0, 0.1)) {
-    box-shadow: $x $y $blur $color;
+// ------------------------------------
+// 2. CONFIGURACIÓN
+// ------------------------------------
+$transicion-rapida: 0.3s ease-in-out;
+
+// ------------------------------------
+// 3. MIXINS
+// ------------------------------------
+@mixin sombra-card {
+    box-shadow: 0 0 15px $color-sombra;
+}
+
+@mixin flex-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// ------------------------------------
+// 4. ANIMACIÓN 
+// ------------------------------------
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

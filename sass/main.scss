@@ -1,64 +1,103 @@
-@use 'variables' as *;
-@use 'sass:color'; // Importa el módulo de color para adjust()
+// sass/main.scss
 
-// Estilos globales
+@use 'variables' as *;
+@use 'sass:color'; // Necesario para color.adjust()
+
+/* ------------------------------------
+// 1. BASE Y UTILIDADES
+------------------------------------ */
 body {
-    font-family: sans-serif;
-    background-color: $color-claro;
-    margin: 0;
-    padding: 0;
+    background-color: $color-fondo;
+    color: $color-texto-oscuro;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
-// Contenedor principal
-.contenedor {
-    width: 90%;
-    max-width: 960px;
-    margin: 40px auto;
-    background-color: white;
-    padding: 20px;
-    @include sombra-caja;
-    border-radius: 8px;
-    overflow: hidden;
-    
-    // Anidamiento de elementos
-    h1 {
-        color: $color-oscuro;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+.main-content {
+    min-height: 80vh; /* Para que el footer no quede a mitad de página */
+}
 
-    // Botón con anidamiento
-    .boton-animado {
-        display: inline-block;
-        padding: 12px 24px;
-        background-color: $color-primario;
+/* ------------------------------------
+// 2. COMPONENTES (ANIDAMIENTO Y MIXINS)
+------------------------------------ */
+.header, .footer {
+    background-color: $color-texto-oscuro;
+    color: white;
+    padding: 1rem 0;
+}
+
+.navbar {
+    .navbar-brand {
+        font-weight: bold;
         color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: transform $transicion-suave, background-color $transicion-suave;
-        
-        // Pseudo-clase :hover
         &:hover {
-            // Usamos color.adjust() en lugar de darken()
-            background-color: color.adjust($color-primario, $lightness: -15%);
-            transform: translateY(-5px); // Animación de movimiento
+            color: $color-primario;
         }
     }
 }
 
-// Animación de aparición
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
+.card-producto {
+    @include sombra-card;
+    border-radius: 8px;
+    transition: all $transicion-rapida;
+    
+    // Anidamiento
+    h3 {
+        color: $color-primario;
+        font-size: 1.5rem;
     }
-    to {
-        opacity: 1;
-        transform: scale(1);
+
+    &:hover {
+        transform: translateY(-5px);
     }
 }
 
-// Animamos el contenedor al cargar
-.contenedor {
-    animation: aparecer 0.8s ease-out forwards;
+/* ------------------------------------
+// 3. SECCIÓN DE CARDS (FLEXBOX)
+------------------------------------ */
+.seccion-cards {
+    @include flex-centrado;
+    flex-wrap: wrap; // Responsive para mobile
+    gap: 20px;
+    padding: 30px 0;
+}
+
+/* ------------------------------------
+// 4. SECCIÓN DE CONTACTO (GRID)
+------------------------------------ */
+.formulario-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // Desktop
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    .form-control {
+        grid-column: span 2; // Ocupa las dos columnas
+    }
+    .btn-enviar {
+        grid-column: span 2;
+        background-color: $color-primario;
+        transition: background-color $transicion-rapida;
+        // Usamos color.adjust() en lugar de darken()
+        &:hover {
+            background-color: color.adjust($color-primario, $lightness: -10%);
+        }
+    }
+}
+
+// Media Query para Tablet y Mobile (Aplica Responsive)
+@media (max-width: 768px) {
+    .formulario-grid {
+        grid-template-columns: 1fr; // Pasa a una sola columna en mobile/tablet
+    }
+}
+
+/* ------------------------------------
+// 5. ANIMACIÓN AL CARGAR
+------------------------------------ */
+.animate-on-load {
+    animation: slideInFromTop 0.8s ease-out forwards;
+    animation-delay: 0.1s; // Un pequeño retraso para que se note
 }
